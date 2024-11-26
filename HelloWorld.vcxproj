@@ -143,9 +143,6 @@
     <ClInclude Include="hiLo.h" />
     <ClInclude Include="random.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="test.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
