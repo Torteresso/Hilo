@@ -76,6 +76,13 @@ namespace HiLo
 		} while (currentTryNb < Parameter::nbGuesses);
 	}
 
+	void sayRules()
+	{
+		std::cout << "Lets play a game. I'm thinking of a number between " << Parameter::minValue <<
+			" and " << Parameter::maxValue << ". You have " << Parameter::nbGuesses << " tries to guess what."
+			<< '\n';
+	}
+
 	void play()
 	{
 		bool userWantsToPlay{true};
@@ -83,9 +90,7 @@ namespace HiLo
 		{
 			const int targetNumber{ Random::get(Parameter::minValue, Parameter::maxValue) };
 
-			std::cout << "Lets play a game. I'm thinking of a number between " << Parameter::minValue <<
-				" and " << Parameter::maxValue << ". You have " << Parameter::nbGuesses << " tries to guess what."
-				<< '\n';
+			sayRules();
 
 			userIsGuessing(targetNumber);
 
