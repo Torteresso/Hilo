@@ -1,5 +1,5 @@
-#ifdef HANDLINGINVALIDINPUT_H
-#define HANDLINGINVALIDINPUT_H
+#ifndef ERROR_H
+#define ERROR_H
 
 namespace ErrorInput
 {

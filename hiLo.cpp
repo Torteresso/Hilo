@@ -1,10 +1,11 @@
 #include "hiLo.h"
 #include "random.h"
+#include "error.h"
 #include <iostream>
-#include "handlingInvalidInput.h"
 
 namespace HiLo
 {
+
 	namespace Parameter
 	{
 		constexpr int maxValue{ 100 };
@@ -14,14 +15,35 @@ namespace HiLo
 
 	int askUserGuess(int tryNb)
 	{
-		std::cout << "Guess #" << tryNb << " : ";
+		while (true)
+		{
+			std::cout << "Guess #" << tryNb << " : ";
 
-		int guess{};
-		
-		std::cin >> guess;
+			int guess{};
+			
+			std::cin >> guess;
+	
+			if (ErrorInput::clearFailedExtraction())
+			{
+				std::cout << "Invalid input. Please try again.";
+				continue;
+			}
 
-		return guess;
+			if (ErrorInput::hasUnextractedInput())
+			{
+				ErrorInput::ignoreLine();
+				std::cout << "Invalid input. Please try again.";
+				continue;
+			}
 
+			if (guess < Parameter::minValue || guess > Parameter::maxValue)
+			{
+				std::cout << "Out of bound guess. Please try again.";
+				continue;
+			}
+
+			return guess;
+		}
 	}
 
 	bool evaluateGuess(int userGuess, int target)
