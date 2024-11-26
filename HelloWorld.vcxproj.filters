@@ -21,12 +21,18 @@
     <ClCompile Include="hiLo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="handlingInvalidInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hiLo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="handlingInvalidInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

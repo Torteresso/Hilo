@@ -136,10 +136,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="handlingInvalidInput.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="hiLo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="handlingInvalidInput.h" />
     <ClInclude Include="hiLo.h" />
     <ClInclude Include="random.h" />
   </ItemGroup>

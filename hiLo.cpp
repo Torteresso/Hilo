@@ -1,6 +1,7 @@
 #include "hiLo.h"
 #include "random.h"
 #include <iostream>
+#include "handlingInvalidInput.h"
 
 namespace HiLo
 {
