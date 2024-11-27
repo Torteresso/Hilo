@@ -25,20 +25,20 @@ namespace HiLo
 	
 			if (ErrorInput::clearFailedExtraction())
 			{
-				std::cout << "Invalid input. Please try again. ";
+				std::cout << "Invalid input. Please try again. \n";
 				continue;
 			}
 
 			if (ErrorInput::hasUnextractedInput())
 			{
 				ErrorInput::ignoreLine();
-				std::cout << "Invalid input. Please try again. ";
+				std::cout << "Invalid input. Please try again. \n";
 				continue;
 			}
 
 			if (guess < Parameter::minValue || guess > Parameter::maxValue)
 			{
-				std::cout << "Out of bound guess. Please try again. ";
+				std::cout << "Out of bound guess. Please try again. \n";
 				continue;
 			}
 
@@ -77,7 +77,7 @@ namespace HiLo
 
 			if (ErrorInput::hasUnextractedInput())
 			{
-				std::cout << "Invalid input. Please try again. ";
+				std::cout << "Invalid input. Please try again. \n";
 				ErrorInput::ignoreLine();
 				userResponse = 'a';
 				continue;
