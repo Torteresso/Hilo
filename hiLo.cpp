@@ -116,7 +116,6 @@ namespace HiLo
 
 	void play()
 	{
-		bool userWantsToPlay{true};
 		do
 		{
 			const int targetNumber{ Random::get(Parameter::minValue, Parameter::maxValue) };
@@ -125,9 +124,7 @@ namespace HiLo
 
 			userIsGuessing(targetNumber);
 
-			userWantsToPlay = isPlayingAgain();
-
-		} while (userWantsToPlay);
+		} while (isPlayingAgain());
 
 		std::cout << "Thanks for playing.";
 	}
